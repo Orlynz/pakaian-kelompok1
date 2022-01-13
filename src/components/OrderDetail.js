@@ -191,7 +191,9 @@ export default class DetailPemesan extends Component {
                 </Col>
               )}
             </Row>
-            <App1 />
+            <Row className="app">
+              <App1 />
+            </Row>
             <TotalBayar keranjangs={keranjangs} {...this.props} />
           </div>
         </div>

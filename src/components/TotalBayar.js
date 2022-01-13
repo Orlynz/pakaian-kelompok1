@@ -25,7 +25,7 @@ export default class TotalBayar extends Component {
       <div>
         <a href="/Konfirmasi">
           <Button className="mt-3 btn" size="md" variant="outline-dark">
-            <strong>BACK</strong>
+            <i class="fas fa-caret-left"></i> <strong>BACK</strong>
           </Button>
         </a>
         <Button

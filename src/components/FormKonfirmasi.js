@@ -2,21 +2,21 @@ import React from "react";
 import { Form, Button, Col, Row } from "react-bootstrap";
 import { useState } from "react";
 const Header = ({ setRefresh, isRefresh }) => {
-  const [nama, setnama] = useState("");
+  const [user, setuser] = useState("");
   const [alamat, setalamat] = useState("");
   const [keterangan, setketerangan] = useState("");
 
   const addTodo = () => {
-    const newTodo = { nama, keterangan, alamat, done: false };
+    const newTodo = { user, keterangan, alamat, done: false };
 
-    fetch("http://localhost:3004/form", {
+    fetch("http://localhost:3004/pesanans", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newTodo),
     }).then(() => {
-      setnama("");
+      setuser("");
       setalamat("");
       setketerangan("");
       setRefresh(true);
@@ -42,8 +42,8 @@ const Header = ({ setRefresh, isRefresh }) => {
                 type="text"
                 placeholder="Tulis Nama Anda..."
                 required
-                value={nama}
-                onChange={(e) => setnama(e.target.value)}
+                value={user}
+                onChange={(e) => setuser(e.target.value)}
               />
             </Form.Group>
           </Col>
@@ -80,7 +80,7 @@ const Header = ({ setRefresh, isRefresh }) => {
         </Form>
         <a href="/OrderCart">
           <Button className="mt-3 btn" size="md" variant="outline-dark">
-            <strong>BACK</strong>
+            <i class="fas fa-caret-left"></i> <strong>BACK</strong>
           </Button>
         </a>
         <a href="/OrderDetail">
@@ -91,7 +91,7 @@ const Header = ({ setRefresh, isRefresh }) => {
             style={{ float: "right" }}
             onClick={addTodo}
           >
-            <strong>NEXT</strong>
+            <strong>NEXT</strong> <i class="fas fa-caret-right"></i>
           </Button>
         </a>
       </Col>

@@ -9,7 +9,7 @@ const Icon = ({ nama }) => {
   if (nama === "Pakaian")
     return <FontAwesomeIcon icon={faTshirt} className="mr-2" />;
   if (nama === "Jaket")
-    return <img src="wq.png" alt="" width={"35px"} className="mr-2" />;
+    return <img src="wq.png" alt="" width={"25px"} className="mr-2" />;
   if (nama === "Celana")
     return <img src="lo.png" alt="" width={"25px"} className="mr-2" />;
 };

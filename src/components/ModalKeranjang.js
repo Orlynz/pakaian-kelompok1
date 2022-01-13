@@ -9,10 +9,8 @@ const ModalKeranjang = ({
   handleClose,
   keranjangDetail,
   jumlah,
-  keterangan,
   tambah,
   kurang,
-  changeHandler,
   handleSubmit,
   totalHarga,
   hapusPesanan,
@@ -48,9 +46,9 @@ const ModalKeranjang = ({
               >
                 <FontAwesomeIcon icon={faMinus} />
               </Button>
-
+              &nbsp;
               <strong>{jumlah}</strong>
-
+              &nbsp;
               <Button
                 variant="dark"
                 size="sm"
@@ -60,31 +58,19 @@ const ModalKeranjang = ({
                 <FontAwesomeIcon icon={faPlus} />
               </Button>
             </Form.Group>
-
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Keterangan :</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows="3"
-                name="keterangan"
-                placeholder="Contoh : Ukuran, Warna, dll..."
-                value={keterangan}
-                onChange={(event) => changeHandler(event)}
-              />
-            </Form.Group>
+            <hr />
             <Button variant="dark" type="submit">
               Simpan
             </Button>
+            <Button
+              variant="dark"
+              style={{ float: "right" }}
+              onClick={() => hapusPesanan(keranjangDetail.id)}
+            >
+              <FontAwesomeIcon icon={faTrash} /> Hapus Pesanan
+            </Button>
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button
-            variant="dark"
-            onClick={() => hapusPesanan(keranjangDetail.id)}
-          >
-            <FontAwesomeIcon icon={faTrash} /> Hapus Pesanan
-          </Button>
-        </Modal.Footer>
       </Modal>
     );
   } else {

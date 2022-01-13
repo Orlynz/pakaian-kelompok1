@@ -158,7 +158,7 @@ export default class Hasil extends Component {
             />
             <a href="/">
               <Button className="mt-3 btn" size="md" variant="outline-dark">
-                <strong>BACK</strong>
+                <i class="fas fa-caret-left"></i> <strong>BACK</strong>
               </Button>
             </a>
             <a href="/Konfirmasi">
@@ -168,7 +168,7 @@ export default class Hasil extends Component {
                 variant="outline-dark"
                 style={{ float: "right" }}
               >
-                <strong>NEXT</strong>
+                <strong>NEXT</strong> <i class="fas fa-caret-right"></i>
               </Button>
             </a>
           </div>

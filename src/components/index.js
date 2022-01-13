@@ -5,6 +5,9 @@ import Menus from "./Menus";
 import Footer from "./Footer";
 import Konfirmasi from "./Konfirmasi";
 import OrderDetail from "./OrderDetail";
+import Admin from "./Admin";
+import Login from "./Login";
+import Kontak from "./Kontak";
 
 export {
   OrderCart,
@@ -14,4 +17,7 @@ export {
   Footer,
   Konfirmasi,
   OrderDetail,
+  Kontak,
+  Login,
+  Admin,
 };

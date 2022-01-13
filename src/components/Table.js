@@ -5,7 +5,7 @@ const TodoItem = ({ setRefresh, isRefresh }) => {
   const [form, setform] = useState([]);
   useEffect(() => {
     if (isRefresh) {
-      fetch("http://localhost:3004/form")
+      fetch("http://localhost:3004/pesanans")
         .then((res) => {
           return res.json();
         })
@@ -43,7 +43,7 @@ const TodoItem = ({ setRefresh, isRefresh }) => {
                         </p>
                       </Col>
                       <Col>
-                        <p style={{ float: "right" }}>{todo.nama}</p>
+                        <p style={{ float: "right" }}>{todo.user}</p>
                       </Col>
                     </Row>
                     <Row>

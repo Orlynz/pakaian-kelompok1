@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
-import { Konfirmasi } from "../components";
+import { Konfirmasi, NavbarComponent, Footer } from "../components";
 import { API_URL } from "../utils/constants";
 import axios from "axios";
 import swal from "sweetalert";
@@ -131,14 +131,18 @@ export default class Home extends Component {
   render() {
     const { keranjangs } = this.state;
     return (
-      <div className="mt-3">
-        <Container>
-          <Konfirmasi
-            keranjangs={keranjangs}
-            {...this.props}
-            update={this.update}
-          />
-        </Container>
+      <div>
+        <NavbarComponent />
+        <div className="mt-3">
+          <Container>
+            <Konfirmasi
+              keranjangs={keranjangs}
+              {...this.props}
+              update={this.update}
+            />
+          </Container>
+        </div>
+        <Footer />
       </div>
     );
   }
